@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Queijaria Produtos Naturais - Queijos artesanais, cestas de presente e produtos regionais de Minas Gerais. Ofertas imperdíveis com frete expresso e parcelamento em até 12x.">
+  <meta name="keywords" content="queijo artesanal, cesta de presente, queijaria, Minas Gerais, Passos, produtos naturais, queijo mineiro">
+  <title>Loja Oficial – Queijaria Produtos Naturais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-bar__track">
+      <span class="announcement-bar__text">🧀 Ofertas imperdíveis! Queijos selecionados com descontos especiais 🧀</span>
+      <span class="announcement-bar__text">🧀 Ofertas imperdíveis! Queijos selecionados com descontos especiais 🧀</span>
+      <span class="announcement-bar__text">🧀 Ofertas imperdíveis! Queijos selecionados com descontos especiais 🧀</span>
+      <span class="announcement-bar__text">🧀 Ofertas imperdíveis! Queijos selecionados com descontos especiais 🧀</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="header__top">
+        <!-- Left: Nav links -->
+        <div class="header__left">
+          <a href="https://movixtransportadora.com/index.html" class="header__nav-link" target="_blank" rel="noopener">Rastrear Pedido</a>
+          <a href="#" class="header__nav-link">Ver como rastrear</a>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="header__center">
+          <a href="#" class="header__logo">
+            <svg class="header__logo-icon" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="48" stroke="#8B1A1A" stroke-width="3"/>
+              <text x="50" y="40" text-anchor="middle" fill="#8B1A1A" font-size="14" font-weight="bold" font-family="Inter, sans-serif">QUEIJARIA</text>
+              <text x="50" y="58" text-anchor="middle" fill="#8B1A1A" font-size="9" font-family="Inter, sans-serif">PRODUTOS</text>
+              <text x="50" y="70" text-anchor="middle" fill="#8B1A1A" font-size="9" font-family="Inter, sans-serif">NATURAIS</text>
+              <circle cx="30" cy="78" r="3" fill="#8B1A1A" opacity="0.3"/>
+              <circle cx="50" cy="82" r="2" fill="#8B1A1A" opacity="0.3"/>
+              <circle cx="70" cy="78" r="3" fill="#8B1A1A" opacity="0.3"/>
+            </svg>
+            <div>
+              <div class="header__logo-text">Queijaria Produtos Naturais</div>
+              <div class="header__logo-sub">Queijos Artesanais • Passos-MG</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right: Icons -->
+        <div class="header__right">
+          <div class="header__social">
+            <a href="#" class="header__social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="header__social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="header__social-link" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            </a>
+          </div>
+
+          <button class="header__icon-btn" onclick="toggleSearch()" aria-label="Pesquisar" id="search-toggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+
+          <button class="header__icon-btn" aria-label="Minha Conta" id="account-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </button>
+
+          <button class="header__cart-btn" onclick="openCartSidebar()" id="cart-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="header__cart-count" id="cart-count" style="display:none;">0</span>
+            <span>Carrinho /</span>
+            <span class="header__cart-total" id="cart-total-header">R$ 0,00</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Bar (hidden by default) -->
+      <div class="header__search-bar" id="search-bar">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="search-input" placeholder="Pesquisar por..." aria-label="Pesquisar produtos">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main">
+
+    <!-- Section: Featured Products -->
+    <section class="products-section" id="section-featured">
+      <h1 class="section-title">Os mais pedidos!</h1>
+      <div class="product-grid" id="featured-products">
+        <!-- Rendered by JS -->
+
+    <!-- Benefits Bar -->
+    <section class="benefits-bar" id="benefits">
+      <div class="benefits-bar__inner">
+        <div class="benefit-item">
+          <svg class="benefit-item__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="4" y="14" width="56" height="36" rx="4"/>
+            <path d="M4 24h56"/>
+            <rect x="40" y="30" width="12" height="8" rx="2"/>
+            <circle cx="18" cy="50" r="4" fill="currentColor"/>
+            <circle cx="46" cy="50" r="4" fill="currentColor"/>
+          </svg>
+          <span class="benefit-item__text">Frete Expresso</span>
+        </div>
+        <div class="benefit-item">
+          <svg class="benefit-item__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="8" y="8" width="48" height="48" rx="6"/>
+            <path d="M8 20h48"/>
+            <rect x="16" y="28" width="10" height="8" rx="1"/>
+            <rect x="30" y="28" width="10" height="8" rx="1"/>
+            <rect x="16" y="40" width="10" height="8" rx="1"/>
+            <rect x="30" y="40" width="10" height="8" rx="1"/>
+            <rect x="44" y="28" width="6" height="8" rx="1"/>
+          </svg>
+          <span class="benefit-item__text">Parcelamento<br>em até 12x</span>
+        </div>
+        <div class="benefit-item">
+          <svg class="benefit-item__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M32 8L8 20v8l24 12 24-12v-8L32 8z"/>
+            <path d="M8 28l24 12 24-12"/>
+            <path d="M8 38l24 12 24-12"/>
+            <circle cx="50" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="50" y="18" text-anchor="middle" fill="currentColor" font-size="10" font-weight="bold" stroke="none">%</text>
+          </svg>
+          <span class="benefit-item__text">Até 15% de Desconto<br>no PIX</span>
+        </div>
+        <div class="benefit-item">
+          <svg class="benefit-item__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M58 42.5c0 2-1.2 3.9-3.4 5.4C52.3 49.4 48.4 50.3 44 50.3s-8.3-.9-10.6-2.4c-2.2-1.5-3.4-3.4-3.4-5.4v-2a18 18 0 0 0 28 0v2z"/>
+            <path d="M30 38.5c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+            <path d="M6 56c0-7.2 5.8-13 13-13h2"/>
+            <circle cx="19" cy="30" r="9"/>
+            <path d="M44 38.5v-4"/>
+            <path d="M44 34.5l3-3"/>
+          </svg>
+          <span class="benefit-item__text">Atendimento<br>24 Horas</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__heading">Institucional</h3>
+        <ul class="footer__list">
+          <li><a href="#">Aviso Legal</a></li>
+          <li><a href="#">Termos e Serviços</a></li>
+          <li><a href="#">Informações de contato</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Ajuda</h3>
+        <ul class="footer__list">
+          <li><a href="#">Políticas de Envio</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Políticas de Reembolso</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Código de Rastreio</h3>
+        <ul class="footer__list">
+          <li><a href="https://movixtransportadora.com/index.html" target="_blank" rel="noopener">Rastrear Pedido</a></li>
+          <li><a href="#">Ver como rastrear</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">SAC</h3>
+        <div class="footer__sac-info">
+          Atendimento: Seg. à Sáb. 07 às 22h
+          <br><br>
+          Email:<br>
+          <a href="mailto:contato@oficial.queijaria.com">contato@oficial.queijaria.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__location">PASSOS-MG</p>
+      <p class="footer__copy">© 2007 Queijaria Oficial | Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h2 class="cart-sidebar__title">Carrinho</h2>
+      <button class="cart-sidebar__close" onclick="closeCartSidebar()" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-sidebar__body" id="cart-sidebar-body">
+      <div class="cart-sidebar__empty">
+        <div class="cart-sidebar__empty-icon">🛒</div>
+        <p>Nenhum produto no carrinho.</p>
+        <a href="#" onclick="closeCartSidebar(); return false;">Retornar para a loja</a>
+      </div>
+    </div>
+    <div class="cart-sidebar__footer" id="cart-sidebar-footer" style="display:none;">
+      <div class="cart-sidebar__total">
+        <span>Total:</span>
+        <span class="cart-sidebar__total-price" id="cart-sidebar-total">R$ 0,00</span>
+      </div>
+      <button class="cart-sidebar__checkout" onclick="alert('Funcionalidade de checkout em breve!')">FINALIZAR COMPRA</button>
+      <a href="#" class="cart-sidebar__continue" onclick="closeCartSidebar(); return false;">Continuar comprando</a>
+    </div>
+  </div>
+
+  <!-- ===== QUICK VIEW MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Fechar">✕</button>
+      <div class="modal__image-wrap">
+        <img class="modal__image" id="modal-image" src="" alt="">
+      </div>
+      <div class="modal__content">
+        <h3 class="modal__name" id="modal-name"></h3>
+        <div class="modal__pricing">
+          <span class="modal__price-old" id="modal-price-old"></span>
+          <span class="modal__price-new" id="modal-price-new"></span>
+        </div>
+        <div class="modal__installment" id="modal-installment"></div>
+        <p class="modal__description" id="modal-description"></p>
+        <div class="modal__qty-wrap">
+          <span class="modal__qty-label">Quantidade:</span>
+          <button class="modal__qty-btn" onclick="changeModalQty(-1)">−</button>
+          <span class="modal__qty-value" id="modal-qty-value">1</span>
+          <button class="modal__qty-btn" onclick="changeModalQty(1)">+</button>
+        </div>
+        <button class="modal__add-btn" id="modal-add-btn">ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">✓</span>
+    <span class="toast__message"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
